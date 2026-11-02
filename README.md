@@ -22,16 +22,14 @@ From a local checkout:
 nix run
 ```
 
-After this repository has been published as `rschaffar/riscal-nix`, the same app
-will be available without cloning:
+Run directly from GitHub without cloning:
 
 ```sh
 nix run github:rschaffar/riscal-nix
 ```
 
-**The GitHub URL is the intended publication location, not a currently verified
-published repository.** The first run fetches dependencies and may compile the
-application. Nix does not remove the need for working network/DNS access.
+The first run fetches dependencies and may compile the application. Nix does not
+remove the need for working network/DNS access.
 
 Pass an exercise filename or other upstream arguments after `--`:
 
@@ -44,8 +42,8 @@ caller's working directory and filenames containing spaces. Diagnostics remain
 visible on stderr. RISCAL settings remain mutable Java Preferences in your home.
 
 For reproducibility, keep this flake's `flake.lock`; consumers pin the repository
-revision in their own lock file. After publication, an explicit revision can also
-be run as `nix run github:rschaffar/riscal-nix/<commit>`.
+revision in their own lock file. An explicit revision can also be run as
+`nix run github:rschaffar/riscal-nix/<commit>`.
 
 ## Install or use in another flake
 
